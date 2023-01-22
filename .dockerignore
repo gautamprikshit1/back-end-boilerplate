@@ -1,0 +1,12 @@
+docker-target
+target
+cargo
+.git
+
+# some large files generated from profiling
+*.mm_profdata
+chrome_profiler.json
+cargo-timing*.html
+
+# flamegraphs
+/*.svg

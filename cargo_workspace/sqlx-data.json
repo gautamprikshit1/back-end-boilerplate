@@ -1,0 +1,57 @@
+{
+  "db": "PostgreSQL",
+  "6f509c9fde7f51198e9a663f3c67bffb601f6a85681b8596716bd95b097a0cbb": {
+    "describe": {
+      "columns": [],
+      "nullable": [],
+      "parameters": {
+        "Left": [
+          "Varchar",
+          "Varchar",
+          "Varchar",
+          "Int4"
+        ]
+      }
+    },
+    "query": "\n                     insert into options (id, question_id, text, votes)\n                     VALUES ($1, $2, $3, $4)\n                     "
+  },
+  "8b47eec2bbd4e7922562682df838dc31ddd34a985cd11e032c36e8083166163c": {
+    "describe": {
+      "columns": [],
+      "nullable": [],
+      "parameters": {
+        "Left": [
+          "Varchar",
+          "Varchar"
+        ]
+      }
+    },
+    "query": "\n                     insert into questions (id, question)\n                     VALUES ($1, $2)\n                     "
+  },
+  "9d24d91e7505d55e76ed01350761b758111f30b3edc5d517729c2d3e17fd4868": {
+    "describe": {
+      "columns": [
+        {
+          "name": "id",
+          "ordinal": 0,
+          "type_info": "Varchar"
+        },
+        {
+          "name": "question",
+          "ordinal": 1,
+          "type_info": "Varchar"
+        }
+      ],
+      "nullable": [
+        false,
+        false
+      ],
+      "parameters": {
+        "Left": [
+          "Text"
+        ]
+      }
+    },
+    "query": "select * from questions where id = $1"
+  }
+}
